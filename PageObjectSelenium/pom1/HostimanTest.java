@@ -38,12 +38,12 @@ public class HostimanTest {
             System.out.println("Элемент не найден или текст элемента не верный.");
         }
         hostiManMain.getLoginOnMainPage();
-        hostiManMain.getPopUp("dx2389@gmail.com", "b12389");
+        hostiManMain.getPopUp("login", "password");
 
         hmUser = new HMUser(driver);
         hmUser.exitPopUpButton();
         try {
-            assertEquals("игорь вальнев",hmUser.userNameText().toLowerCase());
+            assertEquals("имя пользователя",hmUser.userNameText().toLowerCase());
         } catch (NoSuchElementException e) {
             System.out.println("Элемент не найден или текст элемента не верный.");
         }
